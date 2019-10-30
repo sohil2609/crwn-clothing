@@ -1,13 +1,13 @@
 import React from 'react';
 import "./shop.styles.scss"
-import { shopData } from './ship.data';
+import { SHOP_DATA } from './ship.data';
 import { CollectionPreview } from '../../components/collection-preview/collection-preview.component';
 
 export class ShopPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            collections: shopData
+            collections: SHOP_DATA
         }
     
     }
