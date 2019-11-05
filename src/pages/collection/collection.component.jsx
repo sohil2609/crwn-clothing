@@ -5,7 +5,9 @@ import { selectCollection } from '../../redux/shop/shop.selector';
 import CollectionItem from '../../components/collection-item/collection-item.component';
 
 const CollectionPage = ({ collection }) => {
-    console.log(collection)
+    if(!collection) {
+        return null
+    }
     return (
         <div className="collection-page">
             <h2 className="title">{collection.title.toUpperCase()}</h2>
