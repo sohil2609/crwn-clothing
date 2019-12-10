@@ -1,49 +1,67 @@
 .collection-item {
-    width: 22vw;
-    display: flex;
-    flex-direction: column;
-    height: 350px;
-    align-items: center;
-    position: relative;
-  
+  width: 22vw;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  align-items: center;
+  position: relative;
+
+  .item-img {
+    width: 100%;
+    height: 95%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+  }
+  .custom-button {
+    width: 80%;
+    position: absolute;
+    opacity: 0.7;
+    top: 255px;
+    display: none;
+    @media screen and (max-width: 800px) {
+      display: block;
+      min-width: unset;
+      opacity: 0.9;
+      padding: 0 10px;
+    }
+  }
+
+  &:hover {
     .item-img {
-      width: 100%;
-      height: 95%;
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 5px;
+      opacity: 0.8;
     }
     .custom-button {
-      width: 80%;
-      position: absolute;
-      opacity: 0.7;
-      top: 255px;
-      display: none;
+      display: flex;
+      opacity: 0.85;
+    }
+  }
+  .item-description {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+
+    .product-name {
+      width: 90%;
+      margin-bottom: 15px;
     }
 
+    .price {
+      width: 10%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+    margin: 5px;
     &:hover {
       .item-img {
-        opacity: 0.8;
+        opacity: unset;
       }
       .custom-button {
-        display: flex;
-        opacity: 0.85;
-      }
-    }
-    .item-description {
-      width: 100%;
-      height: 5%;
-      display: flex;
-      justify-content: space-between;
-      font-size: 18px;
-  
-      .product-name {
-        width: 90%;
-        margin-bottom: 15px;
-      }
-  
-      .price {
-        width: 10%;
+        opacity: unset;
       }
     }
   }
+}
